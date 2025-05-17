@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para minha Thalita</title>
+    <script src="assets/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preload" href="/ImagensNovas/fundo.gif">
+    <style>
+
+    </style>
+</head>
+
+<body class="fundo" onclick="musicaOn()">
+    <audio id="player" autoplay="autoplay" controls="controls" loop="loop">
+        <source src="./assets/trilhasonora.mp3" type="audio/mp3" />
+    </audio>
+    <div class="conteudo1">
+        <div>
+            <button style="float: right;" onclick="mudarConteudo()"><img class="icoRight"
+                    src="./ImagensNovas/icoRight.png" alt=""></button>
+        </div>
+        <div id="animacao" class="conteiner">
+            <div>
+                <h1 style="margin-top: 5%;">Antes de pedir algo, quero falar da mulher mais linda do planeta</h1>
+                <h5>Quem será que é?</h5>
+                <button type="button" class="btn btn-danger" onclick="mostrarConteudo()">Descubra!</button>
+                <br>
+                <div>
+                    <img id="fotoGata" style="display: none;" src="./ImagensNovas/fotoGata.jpg" alt=""
+                        class="fotoThalita" onmouseover="naoToque()">
+                    <small id="texto" style="display: none; margin-top: 5%;">
+                        <h5>A mulher que me mostrou o que é o amor, mostrou como a vida pode ser linda e bela, como você é. <br> Isso é só um lembrete para não te deixar esquecer do quanto é especial, você merece todo o amor que consigo te dar, espero ser o suficiente para você.</h5>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteudo2">
+        <div class="conteinerCalendario">
+            <h1 style="margin-top: 5%;">Bem vinda ao nosso calendário</h1>
+            <h5>Clique no dia marcado que quiser!</h5>
+            <hr>
+            <table class="calendario">
+                <span><strong class="text-muted">Março de 2025</strong></span>
+                <thead>
+                    <tr>
+                        <td>Dom</td>
+                        <td>Seg</td>
+                        <td>Ter</td>
+                        <td>Qua</td>
+                        <td>Qui</td>
+                        <td>Sex</td>
+                        <td>Sáb</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="marcado" onclick="mudarFoto1()">1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td class="marcado" onclick="mudarFoto2()">8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td onclick="mudarFoto3()" class="marcado">22</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <table class="calendario">
+                <span><strong class="text-muted">Abril de 2023</strong></span>
+                <thead>
+                    <tr>
+                        <td>Dom</td>
+                        <td>Seg</td>
+                        <td>Ter</td>
+                        <td>Qua</td>
+                        <td>Qui</td>
+                        <td>Sex</td>
+                        <td>Sáb</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td onclick="mudarFoto4()" class="marcado">12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td onclick="mudarFoto5()" class="marcado">19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td class="marcado" onclick="mudarFoto6()">22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td class="marcado" onclick="mudarFoto7()">27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+
+                    <table class="calendario">
+                        <hr>
+                        <span><strong class="text-muted">Maio de 2025</strong></span>
+                        <thead>
+                            <tr>
+                                <td>Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sáb</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="marcado" onclick="mudarFoto8()">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td class="marcado" onclick="mudarFoto9()">11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td class="marcado" onclick="mudarFotoFinal()">22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                        </tr>
+                </tbody>
+                
+            </table>
+            
+        </div>
+    </div>
+    <div class="conteudo3">
+        <div>
+            <button onclick="mudarFoto1()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo3">
+            <h1 style="margin-top: 10%;">Dia 1 de Março</h1>
+            <h5>Nossa primeira conversa</h5>
+            <small style="margin-top: 5%;">
+                <h5>Este foi o dia em que tomei a melhor decisão da minha vida
+                    Te mandar uma mensagem
+                    Ali não imaginava ainda, mas sabia que você faria parte da minha história
+                    e que construirimos um lindo futuro juntos. ❤️
+                   </h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo4">
+        <div>
+            <button onclick="mudarFoto2()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo4">
+            <h1 style="margin-top: 10%;">Dia 8 de Março</h1>
+            <h5>Primeiro date</h5>
+            <img class="imagem2-15-abril" src="./ImagensNovas/Hermione.jpg" alt="">
+            <small style="margin-top: 5%;"> <br>
+                <h5>Nosso "primeiro date" fomos tomar um açai,
+                    eu estava tremendo e nervoso para te conhecer, você era realmente muito linda
+                    Tivemos uma boa conversa, fiquei encantado em você e te dei a bonequinha da Hermione😊
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo5">
+        <div>
+            <button onclick="mudarFoto3()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo5">
+            <h1 style="margin-top: 10%;">Dia 22 de Março</h1>
+            <h5>Primeiro beijo 💕</h5>
+            <small style="margin-top: 5%;">
+                <h5>Esse dia marcou um ponto importante, te levei para jantar no Isaias e fomos passear no lago.
+<br><br>
+                Lembro que o carro estava falhando, ficamos uns minutos parados na frente da sua casa kakakkakakaka. Te levei flores, reservei a mesa, conversamos durante o jantar, eu tinha planejado tudo e foi incrível</h5>
+            </small>
+            <small style="margin-top: 5%;">
+                <h5>Mas depois de tudo, no final da noite, após te entregar as flores, jantarmos, fomos no Igapó, enquanto andavamos na beira do lago... demos o primeiro de muitos beijinhos 💕💕💕💕</h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo6">
+        <div>
+            <button onclick="mudarFoto4()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo6">
+            <h1 style="margin-top: 10%;">Dia 12 de Abril</h1>
+            <h5>Fomos na expo</h5>
+            <img style="width: 400px; height: 650px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./ImagensNovas/expo.jpg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Nesse dia fomos passear na ExpoLondrina, uma experência um tanto quanto conturbada kakakakak</h5>
+            </small>
+            <small style="margin-top: 5%;">
+                <h5>Aluguei o carro e ainda não queria usar o seu, e era um pouco longe para irmos de outro jeito, foi um pouco desastroso porque infelizmente bati o carro, rasguei minha camiseta, e o protetor solar que levei para você explodiu em mim kakakakak
+                <br><br> Porém apesar de tudo, no final da noite, hora que tirei essa foto, lembrei que você esteve a todo momento do meu lado, me senti sortudo e percebi que estava te amando ❤️ <br><br>EU AMO
+                    ESSA
+                    FOTO</h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo7">
+        <div>
+            <button onclick="mudarFoto5()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo7">
+            <h1 style="margin-top: 10%;">Dia 19 de Abril</h1>
+            <h5>Te levei no médico</h5>
+            <small style="margin-top: 5%;">
+                <h5>Infelizmente nesse dia você estava doente, estava dengosa, mas quis fazer o maior ato de amor possível, cuidar de você no momento que você mais precisava, você ter me pedido pedido para te levar no médico foi muito importante para mim, mostrou que você estava me dando mais abertura e confiando em mim❤️
+                    <br>
+                </h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo8">
+        <div>
+            <button onclick="mudarFoto6()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo8">
+            <h1 style="margin-top: 10%;">Dia 22 de Abril</h1>
+            <h5>SEU ANIVERSÁRIO</h5>
+            <img style="width: 480px; height: 650px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./ImagensNovas/melti.jpg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Foi um dia muuuuito especial, fiquei planejando por semanas, o que fariamos, como fariamos, foi muito mais que especial. 
+                    Primeiro planejei flores para serem entregues para você, fiz uma cartinha a mão, comprei um colar que vinha em uma caixinha com um girassol eterno e a caixinha de música do Harry Potter.<br><br>
+                    Então fui te buscar em casa, após já ter recebido as flores, hora que você foi entrar no carro te dei a caixinha de música, espero que todas as vezes que tocar lembre de mim, fomos comer, e depois de jantar fomos no lago.<br><br>
+                    Chegando no lago te dei a cartinha e o colar, você chorou, e nunca senti meu coração tão aquecido, te dei um colar de girassol, para você lembrar que é uma flor, que trás beleza no lugar que está, você é um raio de sol 💞.
+                </h5>
+            </small>
+                <img style="width: 480px; height: 650px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./ImagensNovas/cartinha.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="conteudo9">
+        <div>
+            <button onclick="mudarFoto7()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo9">
+            <h1 style="margin-top: 10%;">Dia 27 de Abril</h1>
+            <h5>Conheci seus pais</h5>
+            <small style="margin-top: 5%;">
+                <h5>O dia que você quis me apresentar para seus pais, ali soube que estávamos avançando bastante, fiquei muito empolgado. Você foi com aquele seu vestido marrom, fico pensando, será que você tem noção do quão maravilhosa você é<br><br>
+                    Você é perfeita, linda, cheirosa, inteligente, e muito mais. Ficamos deitados na rede por horas, conversando, abraçados, foi muito gostoso, o céu estava meio nublado, mas não estava um dia frio, nem calor, estava agradável, foi ótimo passar esse dia com você.
+                </h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo10">
+        <div>
+            <button onclick="mudarFoto8()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo10">
+            <h1 style="margin-top: 8%;">Dia 1 de Maio</h1>
+            <h5>Passear com a Kiara</h5>
+            <img style="width: 700px; height: 400px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./ImagensNovas/caldodecana.jpg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Nesse dia fomos passear com a Kiara no lago, tomar um caldo de cana, foi muito gostoso o passeio, fiquei impressionado com o quanto a Kiara é comportada, uma princesa igual a dona.😊 
+                <br><br>
+                </h5>
+            </small>
+            <img style="width: 700px; height: 400px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+            src="./ImagensNovas/carro.jpg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Gosto dessa foto porque ela me faz lembrar do momento, podemos dizer que ali as coisas começaram a esquentar, além de ser carismática, inteligente, tem um rostinho e corpo bonito 🤭  
+                <br><br>
+                </h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo11">
+        <div>
+            <button onclick="mudarFoto9()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo11">
+            <h1 style="margin-top: 8%;">Dia 11 de Maio</h1>
+            <h5>Fui na igreja com você</h5>
+            <small style="margin-top: 5%;">
+                <h5>Fomos na igreja juntos, eu pedi para ir com você, porque quero mostrar que apesar de algumas diferenças, sempre vou te respeitar e entender o seu lado<br>
+                Nunca vou brigar com você tentando provar que estou certo, quero que saiba que sempre estarei ao seu lado e nunca contra você, se o mundo estiver contra você, eu lutarei contra o mundo.</h5>
+            </small>
+        </div>
+    </div>
+
+
+    <div class="conteudo16">
+        <div>
+            <button onclick="mudarFotoFinal()"><img class="icoRight" src="./ImagensNovas/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner">
+            <h1 style="margin-top: 10%;">Dia 22 de Maio</h1>
+            <h5></h5>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 15%;">
+            <small>
+                <video style="border-radius: 20px; margin-top: 2%; margin-bottom: 2%;" autoplay muted loop>
+                    <source src="ImagensNovas/namoro.mp4" type="video/mp4">
+                </video>
+            </small>
+        </div>
+            <small>
+                <h5>Esse dia será especial... Se quiser mais sobre: </h5>
+            </small>
+            <a href="./pedidoEncontro/pedido.html"><button type="button" class="btn btn-danger">Clique
+                    aqui!</button></a>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
